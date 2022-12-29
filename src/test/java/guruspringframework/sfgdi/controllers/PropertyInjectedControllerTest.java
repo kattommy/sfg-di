@@ -1,0 +1,25 @@
+package guruspringframework.sfgdi.controllers;
+
+import guruspringframework.sfgdi.services.GreetingService;
+import guruspringframework.sfgdi.services.GreetingServiceImpl;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class PropertyInjectedControllerTest { // njamniej preferowany sposób
+
+    PropertyInjectedController controller;
+
+    @BeforeEach
+    void setUp(){
+        controller = new PropertyInjectedController();
+        controller.greetingService = new GreetingServiceImpl();
+    }
+
+    @Test
+    void getGreeting(){
+        System.out.println(controller.getGreeting());
+    }
+
+}
