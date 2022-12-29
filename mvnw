@@ -150,6 +150,7 @@ if [ -z "$JAVACMD" ] ; then
     fi
   else
     JAVACMD="`\\unset -f command; \\command -v java`"
+    JAVACMD="`which java`"
   fi
 fi
 
